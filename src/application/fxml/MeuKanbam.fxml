@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #232323;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.Controller_Kanbam">
+   <children>
+      <HBox fx:id="hbox" layoutY="91.0" prefHeight="610.0" prefWidth="1202.0" style="-fx-background-color: #F1F1F1;" />
+      <JFXTextField alignment="CENTER" editable="false" focusColor="WHITE" layoutX="327.0" layoutY="28.0" prefHeight="38.0" prefWidth="565.0" promptText="KANBAM" unFocusColor="WHITE">
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </JFXTextField>
+   </children>
+</Pane>

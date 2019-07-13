@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="450.0" style="-fx-background-color: #212121;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.Controller_CadastrarUsuario">
+   <children>
+      <JFXTextField fx:id="txt_Login" alignment="CENTER" focusColor="WHITE" layoutX="84.0" layoutY="165.0" prefHeight="26.0" prefWidth="283.0" unFocusColor="#0ab2fa" />
+      <JFXPasswordField fx:id="txt_Senha" alignment="CENTER" focusColor="WHITE" layoutX="107.0" layoutY="241.0" prefHeight="26.0" prefWidth="237.0" unFocusColor="#0ab2fa" />
+      <JFXTextField alignment="CENTER" editable="false" focusColor="WHITE" layoutX="55.0" layoutY="552.0" prefHeight="26.0" prefWidth="342.0" promptText="Development by GigaWise 2019" unFocusColor="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="0.9" />
+         </effect>
+      </JFXTextField>
+      <JFXButton fx:id="btn_Sair" layoutX="425.0" layoutY="1.0" onMouseClicked="#sair" text="X" textFill="#c3c3c3" />
+      <Label layoutX="189.0" layoutY="142.0" text="LOGIN / EMAIL" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="209.0" layoutY="215.0" text="SENHA" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <JFXPasswordField fx:id="txt_repetirsenha" alignment="CENTER" focusColor="WHITE" layoutX="108.0" layoutY="324.0" prefHeight="26.0" prefWidth="237.0" unFocusColor="#0ab2fa" />
+      <Label layoutX="187.0" layoutY="299.0" text="REPETIR SENHA" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btn_cadastrar" layoutX="186.0" layoutY="512.0" onMouseClicked="#screenDados" text="Cadastrar" textFill="WHITE" />
+      <Label layoutX="155.0" layoutY="38.0" text="Pairly" textFill="WHITE">
+         <font>
+            <Font size="51.0" />
+         </font>
+      </Label>
+      <JFXPasswordField fx:id="txt_pergunta" alignment="CENTER" focusColor="WHITE" layoutX="109.0" layoutY="418.0" prefHeight="26.0" prefWidth="237.0" unFocusColor="#0ab2fa" />
+      <Label layoutX="145.0" layoutY="393.0" text="QUAL FOI SEU PRIMEIRO CARRO?" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="103.0" layoutY="467.0" text="CHAVE DE RECUPERAÇÃO:" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txt_recuperacao" alignment="CENTER" editable="false" focusColor="WHITE" layoutX="226.0" layoutY="462.0" prefHeight="26.0" prefWidth="122.0" unFocusColor="#0ab2fa" />
+   </children>
+</Pane>

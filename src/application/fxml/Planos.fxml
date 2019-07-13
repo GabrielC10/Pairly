@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ControllerPlanos">
+   <children>
+      <ImageView fitHeight="410.0" fitWidth="732.0" layoutX="-51.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/2071a417-3063-49cb-bc0a-1d8d41740e7f.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnSair" buttonType="RAISED" layoutX="574.0" layoutY="2.0" onMouseClicked="#sair" text="X" textFill="WHITE" />
+   </children>
+</Pane>

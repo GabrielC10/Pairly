@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSnackbar?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: #212121;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.Controller_Projetos">
+   <children>
+      <JFXButton fx:id="btn_Sair" layoutX="1161.0" layoutY="-2.0" onMouseClicked="#sair" prefHeight="38.0" prefWidth="37.0" text="X" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField alignment="CENTER" editable="false" focusColor="WHITE" layoutX="379.0" layoutY="25.0" prefHeight="18.0" prefWidth="457.0" promptText="MEUS PROJETOS" unFocusColor="WHITE">
+         <effect>
+            <ColorAdjust brightness="0.9" />
+         </effect>
+         <font>
+            <Font size="11.0" />
+         </font>
+      </JFXTextField>
+      <TableView fx:id="tb_Projetos" layoutX="47.0" layoutY="104.0" prefHeight="590.0" prefWidth="332.0">
+        <columns>
+          <TableColumn fx:id="cl_Projetos" prefWidth="239.0" style="-fx-alignment: center;" text="Projetos" />
+            <TableColumn fx:id="cl_Status" prefWidth="92.0" style="-fx-alignment: center;" text="Prioridade" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btn_Novo" buttonType="RAISED" layoutX="411.0" layoutY="274.0" onMouseClicked="#novo" prefHeight="26.0" prefWidth="171.0" style="-fx-background-color: white; -fx-border-radius: 25; -fx-background-radius: 25;" text="Novo" />
+      <JFXButton fx:id="btn_Alterar" buttonType="RAISED" layoutX="412.0" layoutY="317.0" onMouseClicked="#alterar" prefHeight="26.0" prefWidth="171.0" style="-fx-background-color: #04cc40; -fx-border-radius: 25; -fx-background-radius: 25;" text="Gerenciar Projeto" />
+      <JFXButton fx:id="btn_Excluir" buttonType="RAISED" layoutX="414.0" layoutY="362.0" onMouseClicked="#excluir" prefHeight="26.0" prefWidth="171.0" style="-fx-background-color: #a21e23; -fx-border-radius: 25; -fx-background-radius: 25;" text="Excluir" />
+      <JFXSnackbar />
+      <JFXTextField alignment="CENTER" editable="false" focusColor="WHITE" layoutX="847.0" layoutY="71.0" prefHeight="22.0" prefWidth="231.0" promptText="INFORMAÇÕES" unFocusColor="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </JFXTextField>
+      <Label layoutX="817.0" layoutY="107.0" text="- PARA DELETAR UM PROJETO VOCE DEVE INSERIR SUA SENHA" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="832.0" layoutY="123.0" text="- GERENCIE SEUS NOVOS PROJETOS EM SEU DASHBOARD" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="849.0" layoutY="139.0" text="- ADICIONA OU REMOVA MEMBROS DE SUA EQUIPE" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tb_Equipe" layoutX="814.0" layoutY="263.0" prefHeight="305.0" prefWidth="332.0">
+         <columns>
+            <TableColumn fx:id="cl_Usuario" prefWidth="331.0" style="-fx-alignment: center;" text="Equipe do Projeto" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btn_Inserir" buttonType="RAISED" layoutX="814.0" layoutY="619.0" onMouseClicked="#inserir" prefHeight="26.0" prefWidth="160.0" style="-fx-background-color: #58a31f; -fx-border-radius: 25; -fx-background-radius: 25;" text="Inserir" />
+      <JFXButton fx:id="btn_Remover" buttonType="RAISED" layoutX="986.0" layoutY="619.0" onMouseClicked="#remover" prefHeight="26.0" prefWidth="160.0" style="-fx-background-color: #a21e23; -fx-border-radius: 25; -fx-background-radius: 25;" text="Remover" />
+      <JFXButton fx:id="btn_GerenciarEquipe" buttonType="RAISED" layoutX="414.0" layoutY="406.0" onMouseClicked="#gerenciar_equipe" prefHeight="26.0" prefWidth="171.0" style="-fx-background-color: #1d9b97; -fx-border-radius: 25; -fx-background-radius: 25;" text="Gerenciar Equipe" />
+      <Label layoutX="791.0" layoutY="155.0" text="- CLIQUE EM GERENCIAR EQUIPE PARA ADICIONAR OU REMOVER MEMBROS" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="6.0" layoutX="-3.0" layoutY="714.0" stroke="WHITE" strokeType="INSIDE" width="1213.0" />
+      <JFXTextField fx:id="txt_Login" alignment="CENTER" focusColor="WHITE" layoutX="810.0" layoutY="578.0" prefHeight="26.0" prefWidth="339.0" promptText="INSIRA O LOGIN DESEJADO" unFocusColor="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </JFXTextField>
+      <JFXSpinner fx:id="btn_RefreshEquipe" layoutX="819.0" layoutY="267.0" onMouseClicked="#refreshEquipe" prefHeight="14.0" prefWidth="17.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXSpinner>
+      <Label layoutX="840.0" layoutY="271.0" text="Refresh">
+         <font>
+            <Font size="7.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btn_Voltar" layoutX="7.0" layoutY="7.0" onMouseClicked="#voltar" text="&lt; Voltar" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </JFXButton>
+      <JFXSpinner fx:id="btn_Refresh" layoutX="50.0" layoutY="109.0" onMouseClicked="#refreshProjetos" prefHeight="14.0" prefWidth="17.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXSpinner>
+      <Label layoutX="71.0" layoutY="113.0" text="Refresh">
+         <font>
+            <Font size="7.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tbScrum" layoutX="814.0" layoutY="182.0" prefHeight="69.0" prefWidth="332.0">
+         <columns>
+            <TableColumn fx:id="clnScrum" prefWidth="331.0" style="-fx-alignment: center;" text="Scrum Master" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnSelecionar" buttonType="RAISED" layoutX="814.0" layoutY="659.0" onMouseClicked="#selecionar" prefHeight="26.0" prefWidth="332.0" style="-fx-background-color: grey; -fx-border-radius: 25; -fx-background-radius: 25;" text="Selecionar Scrum Master" />
+   </children>
+</Pane>

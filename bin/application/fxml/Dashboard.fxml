@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXBadge?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: #212121;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.Controller_Dashboard">
+   <children>
+      <Pane layoutX="-2.0" layoutY="360.0" prefHeight="360.0" prefWidth="1202.0" style="-fx-background-color: white;">
+         <children>
+            <LineChart layoutX="1.0" layoutY="179.0" prefHeight="180.0" prefWidth="1200.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1fff51" height="128.0" layoutX="117.0" layoutY="40.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+            <Label layoutX="54.0" layoutY="38.0" text="FASES">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <Label layoutX="171.0" layoutY="38.0" text="ATIVIDADES">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <JFXTextField alignment="CENTER" editable="false" focusColor="BLACK" layoutX="447.0" layoutY="14.0" prefHeight="26.0" prefWidth="244.0" promptText="EQUIPE">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor></JFXTextField>
+            <JFXTextField alignment="CENTER" editable="false" focusColor="BLACK" layoutX="879.0" layoutY="14.0" prefHeight="26.0" prefWidth="244.0" promptText="PROJETOS">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor></JFXTextField>
+            <TableView fx:id="tb_projetos" layoutX="818.0" layoutY="54.0" prefHeight="90.0" prefWidth="362.0" stylesheets="@../css/application.css">
+              <columns>
+                <TableColumn fx:id="cln_desc" prefWidth="361.0" style="-fx-alignment: center;" text="Descrição" />
+              </columns>
+            </TableView>
+            <TableView fx:id="tb_equipe" layoutX="391.0" layoutY="56.0" prefHeight="122.0" prefWidth="366.0" stylesheets="@../css/application.css">
+              <columns>
+                <TableColumn fx:id="cln_colab" prefWidth="365.0" style="-fx-alignment: center;" text="Seus Colaboradores" />
+              </columns>
+            </TableView>
+            <TableView fx:id="tb_quantidade" layoutX="132.0" layoutY="58.0" prefHeight="108.0" prefWidth="123.0" stylesheets="@../css/application.css">
+              <columns>
+                <TableColumn fx:id="cln_qtd" prefWidth="121.99996948242188" style="-fx-alignment: center;" text="Q" />
+              </columns>
+            </TableView>
+            <TableView fx:id="tb_fases" layoutX="28.0" layoutY="58.0" prefHeight="108.0" prefWidth="76.0" stylesheets="@../css/application.css">
+              <columns>
+                <TableColumn fx:id="cln_fases" prefWidth="75.0" style="-fx-alignment: center;" text="F" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="btn_GerenciarProjeto" buttonType="RAISED" layoutX="818.0" layoutY="151.0" onMouseClicked="#gerenciarProjeto" prefHeight="26.0" prefWidth="362.0" style="-fx-background-color: #232323; -fx-border-radius: 25; -fx-background-radius: 25;" text="Gerenciar Projeto" textFill="WHITE" />
+         </children>
+      </Pane>
+      <JFXButton fx:id="btn_sair" layoutX="1172.0" onMouseClicked="#sair" text="X">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </JFXButton>
+      <JFXButton layoutX="1150.0" text="-">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </JFXButton>
+      <Rectangle arcHeight="100.0" arcWidth="70.0" fill="WHITE" height="63.0" layoutX="-32.0" layoutY="-9.0" stroke="BLACK" strokeType="INSIDE" width="650.0" />
+      <Label layoutX="18.0" layoutY="12.0" text="LOGO">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="16.0" fill="#35516b" height="30.0" layoutX="135.0" layoutY="12.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+      <JFXToggleButton fx:id="tg_Deslogar" layoutX="514.0" layoutY="5.0" onMouseClicked="#deslogar" selected="true" size="7.0" text="Logged">
+         <font>
+            <Font size="11.0" />
+         </font></JFXToggleButton>
+      <JFXBadge />
+      <JFXButton fx:id="btn_perfil" buttonType="RAISED" layoutX="171.0" layoutY="17.0" onMouseClicked="#screenPerfis" ripplerFill="#02c9c3" text="MEU PERFIL">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="262.0" layoutY="17.0" ripplerFill="#02c9c3" text="PLANO">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btn_projetos" buttonType="RAISED" layoutX="326.0" layoutY="18.0" onMouseClicked="#screenProjetos" ripplerFill="#02c9c3" text="PROJETOS">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="404.0" layoutY="18.0" ripplerFill="#02c9c3" text="ATIVIDADES">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="1122.0" text="?">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </JFXButton>
+      <ListView layoutX="882.0" layoutY="47.0" prefHeight="258.0" prefWidth="223.0" />
+      <JFXTextField alignment="CENTER" focusColor="WHITE" layoutX="882.0" layoutY="310.0" prefHeight="26.0" prefWidth="154.0" promptText="Digite sua mensagem" unFocusColor="WHITE">
+         <effect>
+            <ColorAdjust brightness="0.61" />
+         </effect>
+         <font>
+            <Font size="10.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="1045.0" layoutY="314.0" prefHeight="26.0" prefWidth="60.0" style="-fx-background-color: white; -fx-background-radius: 20;" text="Enviar" />
+      <JFXTextField alignment="CENTER" editable="false" focusColor="WHITE" layoutX="882.0" layoutY="14.0" prefHeight="26.0" prefWidth="223.0" promptText="LEMBRETES" unFocusColor="WHITE">
+         <font>
+            <Font size="11.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="0.95" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </JFXTextField>
+      <JFXSpinner fx:id="btn_RefreshEquipe" layoutX="1076.0" layoutY="4.0" onMouseClicked="#refresh" prefHeight="14.0" prefWidth="17.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXSpinner>
+      <Label layoutX="1097.0" layoutY="8.0" text="Refresh" textFill="WHITE">
+         <font>
+            <Font size="7.0" />
+         </font>
+      </Label>
+      <JFXTextField alignment="CENTER" layoutX="246.0" layoutY="91.0" prefHeight="25.0" prefWidth="234.0" promptText="INFORMAÇÕES">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </JFXTextField>
+      <Label layoutX="255.0" layoutY="127.0" text="- ESCOLHA O PROJETO E CLIQUE EM GERENCIAR" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="246.0" layoutY="142.0" text="- NOSSO KANBAM É PARA DESENVOLVIMENTO ÁGIL" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="229.0" layoutY="157.0" text="- OUTROS PROJETOS USAM MÉTODO PLANILHA DE GESTÃO" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnKanban" buttonType="RAISED" layoutX="53.0" layoutY="212.0" onMouseClicked="#abrirKanban" prefHeight="63.0" prefWidth="142.0" style="-fx-background-color: #353535;" text=" " textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="54.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/kanban3.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnPlanilha" buttonType="RAISED" layoutX="213.0" layoutY="212.0" onMouseClicked="#abrirPlanilha" prefHeight="63.0" prefWidth="142.0" style="-fx-background-color: #353535;" text=" " textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="37.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/planilha.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnSprint" buttonType="RAISED" layoutX="373.0" layoutY="212.0" onMouseClicked="#abrirSprint" prefHeight="63.0" prefWidth="142.0" style="-fx-background-color: #353535;" text=" " textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="48.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/agil.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnRelease" buttonType="RAISED" layoutX="533.0" layoutY="212.0" onMouseClicked="#abrirRelease" prefHeight="63.0" prefWidth="142.0" style="-fx-background-color: #353535;" text=" " textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/release.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXTextField alignment="CENTER" editable="false" focusColor="BLACK" layoutX="55.0" layoutY="181.0" prefHeight="26.0" prefWidth="138.0" promptText="KANBAN">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <font>
+            <Font size="10.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </JFXTextField>
+      <JFXTextField alignment="CENTER" editable="false" focusColor="BLACK" layoutX="214.0" layoutY="181.0" prefHeight="26.0" prefWidth="138.0" promptText="PLANILHA DE GESTÃO">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <font>
+            <Font size="10.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </JFXTextField>
+      <JFXTextField alignment="CENTER" editable="false" focusColor="BLACK" layoutX="375.0" layoutY="181.0" prefHeight="26.0" prefWidth="138.0" promptText="SPRINT">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <font>
+            <Font size="10.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </JFXTextField>
+      <JFXTextField alignment="CENTER" editable="false" focusColor="BLACK" layoutX="535.0" layoutY="181.0" prefHeight="26.0" prefWidth="138.0" promptText="RELEASE">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <font>
+            <Font size="10.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </JFXTextField>
+   </children>
+</Pane>

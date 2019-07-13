@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSnackbar?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: #212121;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXButton layoutX="1161.0" layoutY="-2.0" prefHeight="38.0" prefWidth="37.0" text="X" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField alignment="CENTER" editable="false" focusColor="WHITE" layoutX="379.0" layoutY="25.0" prefHeight="18.0" prefWidth="457.0" promptText="MEUS PROJETOS" text="ANEXOS" unFocusColor="WHITE">
+         <effect>
+            <ColorAdjust brightness="0.9" />
+         </effect>
+         <font>
+            <Font size="11.0" />
+         </font>
+      </JFXTextField>
+      <JFXSnackbar />
+      <TableView layoutX="-8.0" layoutY="106.0" prefHeight="556.0" prefWidth="1213.0">
+         <columns>
+            <TableColumn prefWidth="199.00003051757812" text="ID" />
+            <TableColumn prefWidth="234.0" text="Data Criaçao" />
+            <TableColumn prefWidth="425.0" text="Descriçao" />
+            <TableColumn prefWidth="353.0" text="Nome Arquivo" />
+         </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="88.0" layoutY="673.0" prefHeight="26.0" prefWidth="501.0" style="-fx-background-color: #58a31f; -fx-border-radius: 25; -fx-background-radius: 25;" text="Inserir Anexo" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="6.0" layoutX="-3.0" layoutY="714.0" stroke="WHITE" strokeType="INSIDE" width="1213.0" />
+      <JFXButton buttonType="RAISED" layoutX="28.0" layoutY="21.0" prefHeight="6.0" prefWidth="71.0" style="-fx-border-radius: 25; -fx-background-radius: 25;" text="Salvar" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="98.0" layoutY="19.0" prefHeight="26.0" prefWidth="81.0" style="-fx-border-radius: 25; -fx-background-radius: 25;" text="Cancelar" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="608.0" layoutY="673.0" prefHeight="26.0" prefWidth="501.0" style="-fx-background-color: #58a31f; -fx-border-radius: 25; -fx-background-radius: 25;" text="Remover Anexo" />
+   </children>
+</Pane>

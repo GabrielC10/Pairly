@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #212121;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.Controller_Avatar">
+   <children>
+      <JFXTextField alignment="CENTER" editable="false" focusColor="WHITE" layoutX="93.0" layoutY="36.0" prefHeight="22.0" prefWidth="414.0" promptText="ESCOLHA SEU AVATAR" unFocusColor="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </JFXTextField>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="271.0" layoutX="31.0" layoutY="83.0" stroke="WHITE" strokeType="INSIDE" width="539.0" />
+      <ImageView fx:id="img_View1" fitHeight="132.0" fitWidth="145.0" layoutX="31.0" layoutY="83.0" onMouseClicked="#selecionarImg1" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../avatares/boy-1.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ImageView>
+      <ImageView fx:id="img_View2" fitHeight="132.0" fitWidth="145.0" layoutX="31.0" layoutY="222.0" onMouseClicked="#selecionarImg2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../avatares/man-1.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ImageView>
+      <ImageView fx:id="img_View3" fitHeight="132.0" fitWidth="145.0" layoutX="228.0" layoutY="83.0" onMouseClicked="#selecionarImg3" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../avatares/man.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ImageView>
+      <ImageView fx:id="img_View4" fitHeight="132.0" fitWidth="145.0" layoutX="228.0" layoutY="222.0" onMouseClicked="#selecionarImg4" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../avatares/girl-1.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ImageView>
+      <ImageView fx:id="img_View5" fitHeight="132.0" fitWidth="145.0" layoutX="423.0" layoutY="83.0" onMouseClicked="#selecionarImg5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../avatares/man-4.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ImageView>
+      <ImageView fx:id="img_View6" fitHeight="132.0" fitWidth="145.0" layoutX="423.0" layoutY="222.0" onMouseClicked="#selecionarImg6" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../avatares/girl.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ImageView>
+      <JFXButton fx:id="btn_Selecionar" buttonType="RAISED" layoutX="31.0" layoutY="360.0" onMouseClicked="#selecionar" prefHeight="26.0" prefWidth="539.0" style="-fx-background-color: #58a31f; -fx-border-radius: 25; -fx-background-radius: 25;" text="Selecionar" />
+      <JFXButton fx:id="btn_Sair" layoutX="575.0" layoutY="-1.0" onMouseClicked="#sair" text="X" textFill="WHITE" />
+   </children>
+</Pane>

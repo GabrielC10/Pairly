@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXSnackbar?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: #212121;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ControllerInformAtiv">
+   <children>
+      <JFXButton fx:id="btnSair" layoutX="1161.0" layoutY="-2.0" onMouseClicked="#sair" prefHeight="38.0" prefWidth="37.0" text="X" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField alignment="CENTER" editable="false" focusColor="WHITE" layoutX="379.0" layoutY="25.0" prefHeight="18.0" prefWidth="457.0" promptText="MEUS PROJETOS" text="INFORMAÇÕES DA ATIVIDADE" unFocusColor="WHITE">
+         <effect>
+            <ColorAdjust brightness="0.9" />
+         </effect>
+         <font>
+            <Font size="11.0" />
+         </font>
+      </JFXTextField>
+      <JFXSnackbar />
+      <JFXTextField alignment="CENTER" editable="false" focusColor="WHITE" layoutX="863.0" layoutY="170.0" prefHeight="22.0" prefWidth="231.0" promptText="INFORMAÇÕES" unFocusColor="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </JFXTextField>
+      <Label layoutX="850.0" layoutY="204.0" text="- GERENCIE SEUS NOVOS PROJETOS EM SEU DASHBOARD" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tbResponsavel" layoutX="814.0" layoutY="228.0" prefHeight="79.0" prefWidth="332.0">
+         <columns>
+            <TableColumn fx:id="clnResponsavel" prefWidth="331.0" style="-fx-alignment: center;" text="Responsavel" />
+         </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="6.0" layoutX="-3.0" layoutY="714.0" stroke="WHITE" strokeType="INSIDE" width="1213.0" />
+      <Label layoutX="62.0" layoutY="176.0" text="NOME:" textFill="WHITE" />
+      <Label layoutX="62.0" layoutY="206.0" text="DESCRIÇÃO:" textFill="WHITE" />
+      <Label layoutX="62.0" layoutY="334.0" text="DATA CRIAÇÃO: " textFill="WHITE" />
+      <JFXTextField fx:id="txtNome" focusColor="#04c2f1" layoutX="107.0" layoutY="171.0" prefHeight="26.0" prefWidth="424.0" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtDesc" focusColor="#04c2f1" layoutX="135.0" layoutY="201.0" prefHeight="26.0" prefWidth="397.0" unFocusColor="WHITE" />
+      <JFXDatePicker fx:id="dtCreate" defaultColor="#0ac4ee" layoutX="173.0" layoutY="329.0" prefHeight="26.0" prefWidth="231.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="6.0" layoutX="53.0" layoutY="158.0" stroke="WHITE" strokeType="INSIDE" width="609.0" />
+      <Label layoutX="628.0" layoutY="144.0" text="DADOS" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="6.0" layoutX="52.0" layoutY="313.0" stroke="WHITE" strokeType="INSIDE" width="609.0" />
+      <Label layoutX="630.0" layoutY="299.0" text="DATAS" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="6.0" layoutX="54.0" layoutY="448.0" stroke="WHITE" strokeType="INSIDE" width="609.0" />
+      <Label layoutX="594.0" layoutY="434.0" text="ALTERNATIVOS" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="62.0" layoutY="244.0" text="STATUS:" textFill="WHITE" />
+      <Label layoutX="62.0" layoutY="376.0" text="DATA PRAZO: " textFill="WHITE" />
+      <JFXDatePicker fx:id="dtPrazo" defaultColor="#ed0c0c" layoutX="157.0" layoutY="371.0" prefHeight="26.0" prefWidth="250.0" />
+      <Label layoutX="64.0" layoutY="465.0" text="PRIORIDADE:" textFill="WHITE" />
+      <JFXCheckBox fx:id="ckAlta" checkedColor="#04c2f1" layoutX="196.0" layoutY="465.0" onMouseClicked="#alta" text="Alta" textFill="WHITE" unCheckedColor="WHITE" />
+      <JFXCheckBox fx:id="ckMedia" checkedColor="#04c2f1" layoutX="288.0" layoutY="465.0" onMouseClicked="#media" text="Média" textFill="WHITE" unCheckedColor="WHITE" />
+      <JFXCheckBox fx:id="ckBaixa" checkedColor="#04c2f1" layoutX="393.0" layoutY="465.0" onMouseClicked="#baixa" text="Baixa" textFill="WHITE" unCheckedColor="WHITE" />
+      <Label layoutX="62.0" layoutY="503.0" text="DIAS FAZENDO:" textFill="WHITE" />
+      <JFXTextField fx:id="txtDias" alignment="CENTER" editable="false" focusColor="#04c2f1" layoutX="152.0" layoutY="498.0" prefHeight="26.0" prefWidth="77.0" unFocusColor="WHITE" />
+      <JFXCheckBox fx:id="ckPronto" checkedColor="#04c2f1" layoutX="193.0" layoutY="246.0" onMouseClicked="#pronto" text="Pronto" textFill="WHITE" unCheckedColor="WHITE" />
+      <JFXCheckBox fx:id="ckAtrasado" checkedColor="#04c2f1" layoutX="286.0" layoutY="246.0" onMouseClicked="#atrasado" text="Atrasado" textFill="WHITE" unCheckedColor="WHITE" />
+      <JFXCheckBox fx:id="ckEspera" checkedColor="#04c2f1" layoutX="391.0" layoutY="246.0" onMouseClicked="#espera" text="Em espera" textFill="WHITE" unCheckedColor="WHITE" />
+      <TableView fx:id="tbAnexos" layoutX="814.0" layoutY="340.0" prefHeight="200.0" prefWidth="332.0">
+        <columns>
+          <TableColumn fx:id="clnAnexos" prefWidth="331.0" style="-fx-alignment: center;" text="Anexos" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnInserir" layoutX="814.0" layoutY="550.0" onMouseClicked="#inserirAnexo" prefHeight="26.0" prefWidth="186.0" ripplerFill="BLACK" style="-fx-background-color: white;" text="Inserir Anexo" />
+      <JFXButton fx:id="btnRemover" layoutX="1011.0" layoutY="550.0" onMouseClicked="#remover" prefHeight="26.0" prefWidth="135.0" ripplerFill="BLACK" style="-fx-background-color: white;" text="Remover Anexo" />
+      <TableView fx:id="tbTramitacao" layoutX="53.0" layoutY="550.0" prefHeight="139.0" prefWidth="424.0">
+         <columns>
+            <TableColumn fx:id="clnTramitacao" prefWidth="427.0" style="-fx-alignment: center;" text="Tramitações" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tbFase" layoutX="477.0" layoutY="550.0" prefHeight="139.0" prefWidth="202.0">
+         <columns>
+            <TableColumn fx:id="clnFase" prefWidth="201.0" style="-fx-alignment: center;" text="Fases" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnVisualizar" layoutX="814.0" layoutY="585.0" onMouseClicked="#visualizar" prefHeight="26.0" prefWidth="332.0" ripplerFill="BLACK" style="-fx-background-color: white;" text="Visualizar" />
+      <JFXSpinner fx:id="btn_Refresh" layoutX="1095.0" layoutY="344.0" onMouseClicked="#refreshProjetos" prefHeight="14.0" prefWidth="17.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXSpinner>
+      <Label layoutX="1116.0" layoutY="348.0" text="Refresh">
+         <font>
+            <Font size="7.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

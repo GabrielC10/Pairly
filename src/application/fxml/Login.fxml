@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="450.0" style="-fx-background-color: #212121;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.Controller_Login">
+   <children>
+      <ImageView fitHeight="607.0" fitWidth="905.0" layoutX="-182.0" layoutY="-3.0" opacity="0.57" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/giphy%20(1).gif" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txt_Login" alignment="CENTER" focusColor="WHITE" layoutX="84.0" layoutY="238.0" prefHeight="26.0" prefWidth="283.0" promptText="Login" unFocusColor="#0ab2fa" />
+      <JFXPasswordField fx:id="txt_Senha" alignment="CENTER" focusColor="WHITE" layoutX="107.0" layoutY="322.0" onKeyPressed="#entrarKey" onMouseClicked="#load" prefHeight="26.0" prefWidth="237.0" promptText="Senha" unFocusColor="#0ab2fa" />
+      <JFXTextField alignment="CENTER" editable="false" focusColor="WHITE" layoutX="55.0" layoutY="552.0" prefHeight="26.0" prefWidth="342.0" promptText="Development by GigaWise 2019" unFocusColor="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="0.9" />
+         </effect>
+      </JFXTextField>
+      <JFXButton fx:id="btn_Sair" layoutX="425.0" layoutY="1.0" onMouseClicked="#sair" text="X" textFill="#c3c3c3" />
+      <JFXButton fx:id="btn_Entrar" alignment="CENTER" buttonType="RAISED" layoutX="161.0" layoutY="389.0" onMouseClicked="#entrar" prefHeight="28.0" prefWidth="130.0" style="-fx-background-color: rgb(85,87,83);" text="Entrar" />
+      <Label layoutX="205.0" layoutY="11.0" opacity="0.46" text="release 10" textFill="WHITE">
+         <font>
+            <Font size="8.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btn_Esqueci" layoutX="173.0" layoutY="463.0" onMouseClicked="#esqueciMinhaSenha" text="Esqueci minha senha" textFill="WHITE">
+         <font>
+            <Font name="AnjaliOldLipi" size="10.0" />
+         </font>
+      </JFXButton>
+      <JFXSpinner fx:id="spinner_load" layoutX="425.0" layoutY="580.0" prefHeight="12.0" prefWidth="23.0">
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </JFXSpinner>
+      <JFXButton fx:id="btn_cadastro" layoutX="189.0" layoutY="439.0" onMouseClicked="#screenCadastro" text="Cadastrar-me" textFill="WHITE">
+         <font>
+            <Font name="AnjaliOldLipi" size="10.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="211.0" layoutY="219.0" text="LOGIN" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="209.0" layoutY="304.0" text="SENHA" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="277.0" fitWidth="567.0" layoutX="74.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/LOGO.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

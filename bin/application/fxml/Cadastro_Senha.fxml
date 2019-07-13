@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #212121;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="250.0" layoutY="95.0" text="DIGITE UMA SENHA:" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <JFXPasswordField alignment="CENTER" focusColor="WHITE" layoutX="133.0" layoutY="117.0" prefHeight="26.0" prefWidth="335.0" unFocusColor="WHITE">
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </JFXPasswordField>
+      <Label layoutX="251.0" layoutY="168.0" text="REPITA SUA SENHA:" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <JFXPasswordField alignment="CENTER" focusColor="WHITE" layoutX="134.0" layoutY="190.0" prefHeight="26.0" prefWidth="335.0" unFocusColor="WHITE">
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </JFXPasswordField>
+      <Label layoutX="219.0" layoutY="242.0" text="QUAL FOI SEU PRIMEIRO CARRO?" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <JFXPasswordField alignment="CENTER" focusColor="WHITE" layoutX="135.0" layoutY="260.0" prefHeight="26.0" prefWidth="335.0" unFocusColor="WHITE">
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </JFXPasswordField>
+      <Label layoutX="135.0" layoutY="303.0" text="CHAVE DE RECUPERAÇAO:" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <JFXTextField alignment="CENTER" editable="false" focusColor="WHITE" layoutX="277.0" layoutY="298.0" prefHeight="26.0" prefWidth="195.0" unFocusColor="WHITE">
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </JFXTextField>
+      <JFXButton layoutX="272.0" layoutY="357.0" style="-fx-background-color: #212121;" text="Salvar" textFill="WHITE" />
+      <Label layoutX="189.0" layoutY="16.0" prefHeight="50.0" prefWidth="152.0" text="Pairly" textFill="WHITE">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="291.0" layoutY="41.0" text="WITH FACEBOOK">
+         <textFill>
+            <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#f8f3f3" />
+                  <Stop color="#007bee" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <JFXButton layoutX="574.0" text="X" textFill="WHITE" />
+   </children>
+</Pane>

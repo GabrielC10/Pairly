@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #212121;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ControllerImagem">
+   <children>
+      <JFXTextField fx:id="txtCaminho" alignment="CENTER" editable="false" focusColor="WHITE" layoutX="57.0" layoutY="86.0" prefHeight="26.0" prefWidth="329.0" promptText="Caminho" unFocusColor="WHITE">
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+         <font>
+            <Font size="10.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnSelecionar" layoutX="408.0" layoutY="86.0" onMouseClicked="#selecionar" prefHeight="26.0" prefWidth="135.0" ripplerFill="BLACK" style="-fx-background-color: white;" text="Selecionar" />
+      <ImageView fx:id="imgImagem" fitHeight="241.0" fitWidth="491.0" layoutX="57.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXTextField alignment="CENTER" editable="false" focusColor="WHITE" layoutX="128.0" layoutY="11.0" prefHeight="26.0" prefWidth="329.0" promptText="INSERIR IMAGEM (JPG, PNG, JPEG)" unFocusColor="WHITE">
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+         <font>
+            <Font size="10.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnSair" layoutX="568.0" layoutY="-4.0" onMouseClicked="#sair" prefHeight="38.0" prefWidth="37.0" text="X" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</Pane>
